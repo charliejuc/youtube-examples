@@ -49,8 +49,8 @@ const thunk =
   () =>
     fn(...args);
 
-const getCharlie = functionAsyncCache(thunk(getUser)(1));
-const getOtto = functionAsyncCache(thunk(getUser)(2));
+const getCharlie = thunk(functionAsyncCache(getUser))(1);
+const getOtto = thunk(functionAsyncCache(getUser))(2);
 
 const isCharlie = async (lazyUser) => {
   const user = await lazyUser();
