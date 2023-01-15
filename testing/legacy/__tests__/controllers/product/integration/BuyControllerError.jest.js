@@ -69,7 +69,7 @@ test('buyController should return "productId" error', async () => {
   expect(result).toHaveProperty('errors.productId');
 });
 
-test('buyController should return "productId" error', async () => {
+test('buyController should return "userId" error', async () => {
   const body = {
     productId: 1,
   };
